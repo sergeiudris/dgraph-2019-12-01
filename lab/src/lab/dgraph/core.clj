@@ -55,19 +55,35 @@
     res))
 
 (defn res->str
-  "Response protobuf object to string"
+  "Returns Response protobuf object to string"
   [res]
   (->
    (.getJson res)
    (.toStringUtf8)))
 
 (defn q
-  "query Dgraph"
+  "Queries Dgraph"
   [opts]
   (->
    (q-res opts)
    (res->str)))
 
+
+(defn prn-members
+  "Prints unique members of an instance using clojure.reflect"
+  [inst]
+  (->>
+   (reflect inst)
+   (:members)
+   (sort-by :name)
+   (map #(:name %))
+   (set)
+   (into [])
+   (sort)
+   pp/pprint
+  ;  (pp/print-table )
+  ;  (pp/print-table [:name :flags :parameter-types])
+   ))
 
 (comment
 
@@ -104,10 +120,27 @@
                     :qstring qstring
                     :vars    {"$a" "Alice"}})))
   
-  (->
+  (->>
    (reflect res)
+   (:members)
+   (sort-by :name)
+   (map #(:name %))
+   (set)
+   (into [])
+   (sort)
    pp/pprint
+  ;  (pp/print-table )
+  ;  (pp/print-table [:name :flags :parameter-types])
    )
 
+  (prn-members res)
+  
+  (sort ["a" "c" "b"])
+  
+  (->
+   (.getTxn res)
+  ;  (.toStringUtf8)
+   prn-members
+   )
   ;;;
   )
