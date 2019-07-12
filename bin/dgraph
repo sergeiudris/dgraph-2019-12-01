@@ -2,7 +2,7 @@
 
 
 dc(){
-    docker-compose -f dgraph.yml "$@"
+    docker-compose -f docker/dgraph.yml "$@"
 }
 
 up(){
