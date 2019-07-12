@@ -190,3 +190,25 @@
   
   ;;;
   )
+
+(defn set-schema
+  "Set the dgraph schema"
+  [{:keys [schema-string
+           client]}]
+  (let [op (->
+            (DgraphProto$Operation/newBuilder)
+            (.setSchema schema-string)
+            (.build))]
+    (.alter client op)))
+
+(comment
+  
+  (set-schema {
+               :schema-string "
+              xid: string @index (exact) .
+              "
+               :client c
+               })
+  
+  ;;;
+  )
