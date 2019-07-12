@@ -17,7 +17,7 @@
 
   :plugins [[cider/cider-nrepl "0.21.1"]
             [com.jakemccrary/lein-test-refresh "0.24.1"]
-            [lein-virgil "0.1.9"]
+            ; [lein-virgil "0.1.9"]
             ; [mvxcvi/whidbey "2.1.1"]
             ]
   :dependencies [;; casaclog

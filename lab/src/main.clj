@@ -1,6 +1,8 @@
 (ns main
   (:require [dev.nrepl]
             [dev.core]
+            [lab.dgraph.core]
+   
 
    ;
             )
