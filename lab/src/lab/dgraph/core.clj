@@ -85,6 +85,8 @@
   ;  (pp/print-table [:name :flags :parameter-types])
    ))
 
+
+
 (comment
 
   Metadata$Key
@@ -142,5 +144,49 @@
   ;  (.toStringUtf8)
    prn-members
    )
+  
+  (def qstring2 "query all($a: string) {
+     all(func: eq(name, $a)) {
+     name
+     }
+    }")
+  
+  
+  
+  (->
+   (q {:client  c
+       :qstring qstring2
+       :vars    {"$a" "Alice"}})
+   json/parse-string)
+  
+  
+  ;;;
+  )
+
+
+(defn mutate
+  "Transact dgraph mutation"
+  [{:keys [data client]}]
+  (let [txn (.newTransaction client)]
+    (try
+      (let [mu  (->
+                 (DgraphProto$Mutation/newBuilder)
+                 (.setSetJson (ByteString/copyFromUtf8 (json/generate-string data)))
+                 (.build))]
+        (.mutate txn mu)
+        (.commit txn)
+        )
+      (catch Exception e (str "caught exception: " (.getMessage e)))
+      (finally (.discard txn)))
+    ;
+    ))
+
+
+(comment
+  
+  (mutate {:data {"name" "John"}
+           :client c
+           })
+  
   ;;;
   )
