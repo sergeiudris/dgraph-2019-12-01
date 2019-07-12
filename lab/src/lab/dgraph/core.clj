@@ -1,5 +1,8 @@
 (ns lab.dgraph.core
   (:require [clojure.repl :refer :all]
+            [cheshire.core :as json]
+            [clojure.pprint :as pp]
+            [clojure.reflect :refer :all]
 
    ;
             )
@@ -35,47 +38,76 @@
                                      (Metadata$Key/of "auth-token" Metadata/ASCII_STRING_MARSHALLER)
                                      "the-auth-token-value"))
                               stub (MetadataUtils/attachHeaders stub md)]
-                          (DgraphClient. stub))
-      :else (DgraphClient. (into-array stub))
+                          (DgraphClient. (into-array [stub])))
+      :else (DgraphClient. (into-array [stub]))
       ; :else stub
       
       )))
 
-(defn q
-  "query Dgraph"
+(defn q-res
+  "returns a Response protocol buffer object "
   [{:keys [client
            qstring
            vars]}]
   (let [res (->
              (.newTransaction client)
              (.queryWithVars qstring vars))]
-    (->
-     (.getJson res)
-     (.toStringUtf8))))
+    res))
+
+(defn res->str
+  "Response protobuf object to string"
+  [res]
+  (->
+   (.getJson res)
+   (.toStringUtf8)))
+
+(defn q
+  "query Dgraph"
+  [opts]
+  (->
+   (q-res opts)
+   (res->str)))
 
 
 (comment
-  
+
   Metadata$Key
-  
+
   (Example/hello)
-  
-  (Example/run )
-  
+
+  (Example/run)
+
   (Example/prn "asd")
-  
-  
+
+
   (Example/main)
-  
+
   (Example/prn)
-  
-  
+
+
   (.println (System/out) "hi")
-  
+
   (def c (create-client {:with-auth-header? false
-                         :hostname "server"
-                         :port 9080
-                         } ))
+                         :hostname          "server"
+                         :port              9080}))
+
+  (def qstring (str "query all($a: string){\n"  "all(func: eq(name, $a)) {\n"  "    name\n"  "  }\n"  "}"))
+
+  (->
+   (q {:client  c
+       :qstring qstring
+       :vars    {"$a" "Alice"}})
+   json/parse-string)
   
+  (def res (->
+            (q-res {:client  c
+                    :qstring qstring
+                    :vars    {"$a" "Alice"}})))
+  
+  (->
+   (reflect res)
+   pp/pprint
+   )
+
   ;;;
   )
