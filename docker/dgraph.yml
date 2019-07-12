@@ -27,7 +27,7 @@ services:
         target: /dgraph
         volume:
           nocopy: true
-      # - "./:/opt/app"
+      - "../:/opt/app"
     ports:
       - 8080:8080
       - 9080:9080
