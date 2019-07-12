@@ -96,9 +96,10 @@ public class Example {
     People ppl = gson.fromJson(res.getJson().toStringUtf8(), People.class);
 
     // Print results
-    System.out.printf("people found: %d\n", ppl.all.size());
+    // System.out.printf("people found: %d\n", ppl.all.size());
     // ppl.all.forEach(person -> System.out.println(person.name));
-    ppl.all.forEach(person -> prn(person.name));
+    prn("people found: " + String.valueOf(ppl.all.size()));
+    ppl.all.forEach(person -> prn("person: " + person.name));
 
   }
 
