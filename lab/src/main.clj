@@ -2,6 +2,7 @@
   (:require [dev.nrepl]
             [dev.core]
             [lab.dgraph.core]
+            [lab.dgraph.sample]
    
 
    ;
