@@ -66,7 +66,9 @@
   [opts]
   (->
    (q-res opts)
-   (res->str)))
+   (res->str)
+   (json/parse-string)
+   ))
 
 
 (defn prn-members
@@ -202,13 +204,47 @@
     (.alter client op)))
 
 (comment
-  
-  (set-schema {
-               :schema-string "
+
+  (set-schema {:schema-string "
               xid: string @index (exact) .
               "
-               :client c
-               })
+               :client        c})
+
+  (->
+   (q {:qstring "
+      {q                 (func:allofterms (name @en, \"Kathryn Bigelow\"))
+       {_predicate_ } 
+      }
+      "
+       :client  c
+       :vars    {}})
+   (pp/pprint))
+
+
+
+  (->
+   (q {:qstring "{
+  caro(func: allofterms(name@en, \"Marc Caro\")) {
+    name@en
+    director.film {
+      name@en
+    }
+  }
+  jeunet(func: allofterms(name@en, \"Jean-Pierre Jeunet\")) {
+    name@en
+    director.film {
+      name@en
+    }
+  }
+}"
+       :client  c
+       :vars    {}})
+
+   (pp/pprint))
   
+  
+
+
   ;;;
   )
+
