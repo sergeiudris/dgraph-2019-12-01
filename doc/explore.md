@@ -54,3 +54,5 @@
   - 
   - build system, emit events into kafka, stream into dgraph, show in ui the graph of events in the system
 
+* if ui generates event (say query) 4:
+  - 
