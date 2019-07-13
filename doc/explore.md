@@ -41,4 +41,16 @@
 
 * should allow both res and sockets, but use messaging standard - one unifying "language" of the system
 * if ui generates event (say query) 3:
-  -
+  - request is amde and data applied to state
+  - events can be synchronous (like sagas)
+  - when socket, when request ?
+  - event groups, groups of groups etc. - get only last response
+  - event group is like a procedure with a resulting event
+  - parallel event processing (like Promise.all)
+  - cancelling
+  - progress, status
+  - replaying from _ to _
+  - searching events
+  - 
+  - build system, emit events into kafka, stream into dgraph, show in ui the graph of events in the system
+
