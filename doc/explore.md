@@ -62,4 +62,10 @@
   - desktop has access to file system and OS, but ui (including terminal, file management)
     should operate on data within the system. Everyhing is containers or within containers. 
     From actual OS we need repository and docker
-* 
+* editor
+  - files in the repo represent the system. changing files means changing description(declaration) of the system
+  - every engineer wants to chagne code/symbols and see the change in the system
+  - the idea of editor for editing files is not enough: what is needed is an inteeface that exposes
+    files and the running system as a whole. code should be part of the system
+  - it's harder when it is about hardware
+
