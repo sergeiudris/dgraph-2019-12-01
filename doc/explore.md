@@ -54,5 +54,12 @@
   - 
   - build system, emit events into kafka, stream into dgraph, show in ui the graph of events in the system
 
-* if ui generates event (say query) 4:
-  - 
+
+
+# existing tech
+
+* browser vs desktop
+  - desktop has access to file system and OS, but ui (including terminal, file management)
+    should operate on data within the system. Everyhing is containers or within containers. 
+    From actual OS we need repository and docker
+* 
