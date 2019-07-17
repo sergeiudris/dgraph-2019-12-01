@@ -68,4 +68,12 @@
   - the idea of editor for editing files is not enough: what is needed is an inteeface that exposes
     files and the running system as a whole. code should be part of the system
   - it's harder when it is about hardware
+* versioning (code)
+  - the system might have e.g. 1gb of files that are code, and even more dependencies (like linux)
+  - so it should be an option to include these files into a running system
+  - so it can be engineered while runnign
+  - git and branching logic etc. may be part of the system, but you might want to just edit code locally as usual
+  - the key is the ability to have repl to all aprts of the running ssytem, ability to query the sytem and events
+  
+
 
