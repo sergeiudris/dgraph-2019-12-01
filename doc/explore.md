@@ -74,6 +74,10 @@
   - so it can be engineered while runnign
   - git and branching logic etc. may be part of the system, but you might want to just edit code locally as usual
   - the key is the ability to have repl to all aprts of the running ssytem, ability to query the sytem and events
-  
 
 
+
+# concept appendix 1
+
+* should be about records, comments, whole picture, easy git-like version navigation, commits, diffs
+* at the core - desgining, recording, planning, tracking
