@@ -30,3 +30,8 @@
 * versioning: all versions docs should be always available
 * but docs comes after the system starts solving problems and answering questions
 * system value outwheighs growth issues
+
+# idea driven
+
+* features should come from systemic-design approach, not from users (only suggestions, engineers choose/decide)
+
