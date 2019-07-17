@@ -20,3 +20,10 @@
 
 * repl from browser to ui app and to the system/system tool (from engineer ui)
 * historic data, versioning - it should be datomic alike
+
+# documentation
+
+* it everything
+* versioning: all versions docs should be always available
+* but docs comes after the system starts solving problems and answering questions
+* system value outwheighs growth issues
