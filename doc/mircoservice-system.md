@@ -15,3 +15,8 @@
 
 * the key ot success is to achive end user product and evolve glue as a consequence
 * focusing on glue as product will lead to failure
+
+# things to consider
+
+* repl from browser to ui app and to the system/system tool (from engineer ui)
+* historic data, versioning - it should be datomic alike
