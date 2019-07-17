@@ -22,6 +22,7 @@
 * historic data, versioning - it should be datomic alike
 * core functinoality of the system
 * search
+* not a dead system,an engaging system
 
 # documentation
 
