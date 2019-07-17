@@ -35,3 +35,7 @@
 
 * features should come from systemic-design approach, not from users (only suggestions, engineers choose/decide)
 
+# product
+
+* goal - make a product
+* it either succeeds, or can be used to find a host company
