@@ -20,6 +20,8 @@
 
 * repl from browser to ui app and to the system/system tool (from engineer ui)
 * historic data, versioning - it should be datomic alike
+* core functinoality of the system
+* search
 
 # documentation
 
