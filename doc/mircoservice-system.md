@@ -1,0 +1,17 @@
+
+* what i write is glue - services/apps that interface any external parts to single control ui and repl logic
+* stream whatever data from wahter parts into db and control them from ui, repl as assimilated components
+* ui, querying must be easy to create, not pain
+* the should be a tempalte 'bot' clojure app/service taht you take and modify to talk to new component
+* glue puts data into db, presents it let you control things via ui and repling to glue serivces
+* the key difference from eos idea is that the focus is on being able to assimilate anything, using the technology as is; 
+  to come up with new tech that is real requires growth and progress
+* all ui and control apps should be craeted anew, limiting(or even exluding) other tools to favour glue as 
+  unifying and consistent basis of the system
+* the clojure - bash relationship is important
+* web interface should allow for a lot
+
+<br />
+
+* the key ot success is to achive end user product and evolve glue as a consequence
+* focusing on glue as product will lead to failure
