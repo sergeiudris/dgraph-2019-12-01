@@ -56,4 +56,62 @@
   - graph of files
   - graph of fns
   - dependency graph all the way down to language and OS
-  
+
+
+# 12 releases
+
+user can:
+
+1
+
+* login, create public/private projects, teams, organizations
+* create records
+* comments, notes
+* repl w/ arbitrary queries
+
+2
+
+* edit files: verioning, units, links
+
+3
+
+* search
+
+4
+
+* graph of records, units, files
+
+5
+
+* git repo import
+* git queries
+
+6
+
+* clj code units
+* clj graphs of fns, files, deps
+
+7
+
+* queries and forming graphs, ui with queries 
+
+8
+
+* extensions 
+
+9
+
+* records, units -> export as static apps/file
+
+10
+
+* github, lab, bucket integrations: sync repos, publish apps
+
+11
+
+* replay
+
+12
+
+* ml: find patterns, suggestions (changes that were made that might interest you)
+
