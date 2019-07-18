@@ -115,3 +115,8 @@ user can:
 
 * ml: find patterns, suggestions (changes that were made that might interest you)
 
+
+---
+
+* for smart and eager: system does what other systems don't
+* system is not for dumb
