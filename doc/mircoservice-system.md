@@ -39,3 +39,21 @@
 
 * goal - make a product
 * it either succeeds, or can be used to find a host company
+
+
+# features lacking in github + google docs combo
+
+* history in split view allowing to fast-see versions and diffs
+* versions of text pragraph/unit (not only files)
+  easily scrollable or seeable in split view 
+* graph view of all linked text units, docs
+* replay: show (in graph or src/tree) 'movie' of how files/units evolved over time
+* queries like
+  - show me all commits about ...
+  - scope of smbd's commits from _ to _
+* arbitrary queries against graph (code or text units)
+  - all fns that lead to invokation of somefn
+  - graph of files
+  - graph of fns
+  - dependency graph all the way down to language and OS
+  
