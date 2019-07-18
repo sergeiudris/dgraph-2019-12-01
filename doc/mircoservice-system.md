@@ -23,6 +23,10 @@
 * core functinoality of the system
 * search
 * not a dead system,an engaging system
+* mindmeld: the system, when run locally,  should be able to connect to another running system.
+  you should be able to test locally using another systems data
+* trafic rerouting deployment to try versions of the system
+
 
 # documentation
 
