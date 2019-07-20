@@ -26,7 +26,8 @@
 * mindmeld: the system, when run locally,  should be able to connect to another running system.
   you should be able to test locally using another systems data
 * trafic rerouting deployment to try versions of the system
-
+* a way to talk from docker containers to fs of the host (linux) so that is was centralized/organized
+  maybe by encapsulating it into a container 'fs' and other being able to access via http or rpc or ..
 
 # documentation
 
