@@ -129,3 +129,11 @@ user can:
 # tool vs product
 
 * tool is for engineers, product can be used by anyone (given they are eager or educated)
+
+# value
+
+* what is the immediate value of the system ?
+* a prooduct can be valueable for multiple reasons and different number of people
+* immediate value to the end-user is a prerequisite for a dynamic evolution of engineers and the system
+  or can be a genesis environemnt for other systems
+* look forward as far as "what is the immediate value of the system within months ?"
