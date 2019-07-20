@@ -81,3 +81,49 @@
 
 * should be about records, comments, whole picture, easy git-like version navigation, commits, diffs
 * at the core - desgining, recording, planning, tracking
+
+
+# questioning information system
+
+* should not 
+  - prove
+  - fit
+  - please
+  - be a crotch
+* should be
+  - product
+  - for end-user
+  - whole
+  - simple 
+  - solution
+  - smart
+
+* file == project == namespace
+  - dealing with records requires complete editor experience (complex)
+
+* possible data domains:
+  - records
+  - git
+  - records & git
+  - documents (files)
+
+* ?import what kind of data? -> system
+
+* if no files:
+  - issues (again, confluence/jira are basically text editors)
+
+  comes down to text-editor vs no-text-editor
+
+* if no text editor:
+  - systems eventually require TE
+  - otherwise data->answer systems
+  - no TE + records system = failure
+  - text editing cases:
+    - terminal
+    - anything/anywhere in ui
+    - keyboard is text editing
+  - only forms scenario:
+    - issues system (primitive)
+
+* data->answer system, data domains:
+  - git data/management (like kraken - not good at all, bad solution/whole-new-layer ratio
