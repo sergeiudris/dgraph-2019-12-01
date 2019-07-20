@@ -125,3 +125,7 @@ user can:
 
 * for smart and eager: system does what other systems don't
 * system is not for dumb
+
+# tool vs product
+
+* tool is for engineers, product can be used by anyone (given they are eager or educated)
