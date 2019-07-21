@@ -107,7 +107,7 @@
   - records & git
   - documents (files)
   - records & text inforamtion
-  
+
 
 * ?import what kind of data? -> system
 
@@ -129,3 +129,7 @@
 
 * data->answer system, data domains:
   - git data/management (like kraken - not good at all, bad solution/whole-new-layer ratio
+
+
+* engineering experience & value
+
