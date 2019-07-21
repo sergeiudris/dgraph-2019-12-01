@@ -106,6 +106,8 @@
   - git
   - records & git
   - documents (files)
+  - records & text inforamtion
+  
 
 * ?import what kind of data? -> system
 
